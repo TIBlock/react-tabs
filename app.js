@@ -1,4 +1,4 @@
-const HelloWorld = function() {
+copy const HelloWorld = function() {
 	return <h1>Hello World!</h1>;
 };
 
@@ -47,20 +47,14 @@ class Counter extends React.Component {
 	};
 	handleToggle = () => {
 		const color = this.state.color === 'blue' ? 'green' : 'blue';
-    this.setState({
-      color: color
-    })
-  };
+		this.setState({
+			color: color
+		});
+	};
 	render() {
 		return (
 			<div>
-				<h1
-					style={{
-						color: this.state.color
-					}}
-				>
-					Hello {this.props.name}
-				</h1>
+				<h1 style={{color: this.state.color}}>Hello {this.props.name}</h1>
 				<p> The count is {this.state.count}</p>
 				<button onClick={this.handleToggle}>Toggle Color</button>
 				<button onClick={this.handleAdd}>Add</button>
